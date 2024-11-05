@@ -4,9 +4,8 @@ import { Dropzone } from "@/components/Dropzone"
 import { Button } from "@/components/ui/button"
 import { useRef, useState } from "react"
 import axios from "axios";
-import { Url } from "url";
 
-const page = () => {
+const Page = () => {
 
     const [file, setFile] = useState<File | null>()
     const inputRef = useRef<HTMLInputElement>(null);
@@ -73,4 +72,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
