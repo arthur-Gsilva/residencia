@@ -1,4 +1,4 @@
-import React, {useCallback, useState} from 'react'
+import React, {useCallback, useEffect, useState} from 'react'
 import {useDropzone} from 'react-dropzone'
 import { Button } from '@/components/ui/button'
 import { IoCloudUploadOutline } from "react-icons/io5";
@@ -8,9 +8,17 @@ import { filesize } from 'filesize'
 import { IoClose } from "react-icons/io5";
 import { VscError } from "react-icons/vsc";
 
-export const Dropzone = () => {
+type Props = {
+    setData: (a: File | null) => void
+}
+
+export const Dropzone = ({ setData }: Props) => {
 
     const [files, setFiles] = useState<File | null>(null)
+
+    useEffect(() => {
+        setData(files)
+    }, [files])
 
     const onDrop = useCallback((files: File[]) => {
         setFiles(files[0])
