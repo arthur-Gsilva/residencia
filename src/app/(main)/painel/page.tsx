@@ -50,7 +50,7 @@ const Page = () => {
                     <div className="flex items-center gap-2 justify-center mt-8 w-full px-5">
                         <p>Colocar link da vaga:</p>
                         <input 
-                            placeholder="hhttps//vaga.com.br" 
+                            placeholder="https//vaga.com.br" 
                             className="bg-[#0F1535] flex-1 outline-none text-sm bordGradiant p-1 px-3 rounded-xl"
                             ref={inputRef}
                         />
